@@ -1,0 +1,152 @@
+:root {
+    --page-cream: #f7f1e8;
+    --surface-cream: #fffaf2;
+    --surface-tan: #f1e3d0;
+    --deep-brown: #4a2d1d;
+    --warm-brown: #754324;
+    --accent-orange: #c96a32;
+    --accent-orange-hover: #ad5124;
+    --focus-orange: #e58b4c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--page-cream);
+    color: var(--deep-brown);
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Top Hero Image */
+.hero {
+    position: relative;
+    height: 55vh;
+    min-height: 280px;
+    background: var(--deep-brown);
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+/* Curved Cream Section overlapping the hero */
+.content-curve {
+    position: relative;
+    z-index: 1;
+    margin-top: -80px;
+    padding: 64px 20px 40px;
+    min-height: 55vh;
+    background: linear-gradient(to right, #fffaf2, #f1e3d0, #fffaf2);
+    border-top: 8px solid var(--focus-orange);
+    border-top-left-radius: 50% 60px;
+    border-top-right-radius: 50% 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Search Pill */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 520px;
+    padding: 6px 8px 6px 18px;
+    background: var(--surface-cream);
+    border: 2px solid #ffffff;
+    border-radius: 999px;
+    box-shadow: 0 10px 30px rgba(74, 45, 29, 0.15);
+}
+
+.search-box:focus-within {
+    border-color: var(--focus-orange);
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--deep-brown);
+    font-size: 14px;
+}
+
+.search-box input::placeholder {
+    color: #8a7666;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 999px;
+    background: var(--accent-orange);
+    color: var(--surface-cream);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: var(--accent-orange-hover);
+}
+
+/* Ingredient Chips Container */
+.chip-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 520px;
+    margin-top: 14px;
+}
+
+.chip-container{
+        background-color:var(--surface-tan);
+        display:inline-flex;
+        align-items:center;
+        gap:6px;
+        height:30px;
+        padding: 4px 8px 4px 14px;
+        border:1px #dfc3a2;
+        border-radius:999px;
+        box-shadow:0px 2px 6px rgba(74,45,29,0.08);
+        animation:chipPop 0.15s ease-out;
+    }
+.chip-text{
+    font-size:13px;
+    font-weight:300px;
+    color:var(--deep-brown);
+    text-transform:capitalize;
+    padding-left:5px;
+    padding-right:5px;
+}
+.chip-cross{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:20px;
+    border:0px;
+    height:18px;
+    width:18px;
+    font-size:10px;
+    font-weight:700px;
+    cursor:pointer;
+    transition:background-color 0.15s ease,color 0.15s ease;
+    margin-right:2px;
+    background-color:rgb(220,220,220);
+}
+.chip-cross:hover{
+    background-color:var(--accent-orange);
+    color:var(--surface-cream);
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+
+    <header class="hero">
+        <img class="hero-img" src="image.png" alt="A spread of Indian dishes">
+    </header>
+
+    <main class="content-curve">
+        <div class="search-box">
+            <input 
+                type="search" 
+                id="ingredient-input" 
+                placeholder="Enter ingredients (e.g., cardamom, onion, oil)"
+                onkeydown="enter(event)"
+            >
+            <button type="button" id="search-btn" onclick="search(searchArray);">Search</button>
+        </div>
+
+        <div class="chip-list"></div>
+        <div class="card-grid"></div>
+
+    </main>
+
+    <template class="card-template">
+        <div class="card-container">
+            <div class="card-header">
+                <div class="img-container">
+                    <img class="icon" src="image.png">
+                </div>
+                <div class="heading-container">
+                    <p class="recipe-title">Hyderabadi Dum Ka Murgh with Saffron</p>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="main-body">
+                    <div class="body-left">
+                        <div class="rating-container">
+                            <span class="rating">*4.8</span>
+                        </div>
+                        <div class="match-container">
+                            <span class="matches">2/3 matches</span>
+                        </div>
+                    </div>
+                    <div class="body-right">
+                        <p class="ingredients-heading">Ingredients</p>
+                        <ul class="ingredients-list">
+                            <li>chicken</li>
+                            <li>saffron</li>
+                            <li>tomato</li>
+                            <li>onion</li>
+                            <li>chilli</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>⏱ 45m</span>
+                    <span>• Hyderabadi</span>
+                    <span>• 4 srv</span>
+                </div>
+            </div>
+
+        </div>
+    </template>
+
+    <script src="home.js"></script>
+</body>
+</html>
